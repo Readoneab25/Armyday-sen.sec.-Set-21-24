@@ -1,0 +1,317 @@
+  /* ===== GLOBAL STYLES ===== */
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+    color: #222;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: linear-gradient(135deg, #006400, #8FBC8F);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    min-height: 50px;
+    width: 100%;
+    z-index: 1000;
+  }
+  header ul{
+      width: 100%;
+      text-align:left;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  label{
+    display: none;
+  }
+  header h2{
+    display: none;
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  nav {
+    margin-top: 5px;
+  }
+  nav a {
+    margin: 0 12px;
+    color: #6ce66c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    text-decoration: underline;
+    color: #006400;
+  }
+  main {
+    margin-top: 90px; /* offset for fixed header */
+  }
+
+  /* ===== HERO SECTION ===== */
+  .hero {
+    background: url('her.jpg') no-repeat center/cover;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,100,0,0.6);
+  }
+  .hero h2 {
+    position: relative;
+    font-size: 2.8rem;
+    animation: typing 4s steps(40, end), blink 0.8s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    /* width: 0; */
+  }
+  .hero .hh{
+    display: none;
+  }
+  .hero h1{
+    display: none;
+    position: relative;
+    font-size: 2.8rem;
+    animation: typing 4s steps(40, end), blink 0.8s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+  }
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 60%; }
+  }
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 50px 20px;
+  }
+  h2.section-title {
+    text-align: center;
+    color: #006400;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  h2.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #8FBC8F;
+    margin: 8px auto 0;
+    border-radius: 2px;
+  }
+
+  /* ===== STUDENTS DIRECTORY ===== */
+  .students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 20px;
+  }
+  .student-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .student-card.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+  }
+  .student-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,128,0,0.3);
+  }
+  .student-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .student-info {
+    margin-top: 10px;
+  }
+  .student-info h3 {
+    margin: 5px 0;
+    color: #006400;
+  }
+  .student-info p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+  }
+  .whatsapp-btn {
+    background: #25D366;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+  }
+  .whatsapp-btn:hover {
+    background: #1ebe5d;
+  }
+
+  /* ===== TEACHER SECTION ===== */
+  .teacher-card {
+    max-width: 420px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  .teacher-card p{
+    width: 100%;
+    height: 50px;
+    background-color: #006400;
+    border-radius: 25px;
+    padding-top: 20px;
+  }
+  .teacher-card p:hover{
+    background-color: #25D366;
+    color: #006400;
+    font-weight: bolder;
+  }
+  .teacher-card  a{
+    color: #e8f5e9;
+    text-decoration: none;
+  }
+  .teacher-card.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+  }
+  .teacher-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .teacher-card h3 {
+    margin: 10px 0;
+    color: #006400;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #006400;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  footer a{
+    color: #1ebe5d;
+    font-size: 20px;
+  }
+
+  /* ===== BACK TO TOP BUTTON ===== */
+  #backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #006400;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    z-index: 510000;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  #backToTop:hover {
+    background: #228B22;
+  }
+@media(max-width:880px){
+.hero h2{
+    display: none;
+}
+.hero h1{
+    display: flex;
+}
+}
+@media(max-width:760px){
+    header nav{
+        display: grid;
+        position: absolute;
+        background-color: #006400;
+        left: 0;
+        width: 50%;
+        height: 50vh;
+        top: 95%;
+        border-radius: 5px;
+        left: -100%;
+        z-index: 30;
+        transition: 1s;
+    }
+    header{
+        display: flex;
+    justify-content: space-between;
+    }
+    label{
+        display: flex;
+        font-size: 30px;
+        color: #6ce66c;
+        padding-top:30px;
+    }
+    .overay{
+        position: fixed;
+        z-index: 20;
+        height: 100%;
+        width: 90%;
+        top: 0;
+        display: none;
+        left: 50px;
+    }
+    nav a{
+        padding-top: 60px;
+        transition :1s;
+    }
+    .to{
+        display: none;
+        font-size: 40px;
+    }
+    nav a:hover{
+        color: #e8f5e9;
+        text-decoration: none;
+        background-color: #1ebe5d;
+        left: 0;
+       
+    }
+}
+@media(max-width:530px){
+    .hero h1{
+        display: none;
+    }
+    .hero .hh{
+        display: flex;
+    }
+}
