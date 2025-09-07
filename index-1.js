@@ -87,11 +87,19 @@ document.getElementById("over").onclick = function(){
       whatsapp: "08149040848",
       image: "tai.jpg"
     
-    }, {
+    }, 
+    {
     name: "Shuaib Abdulroqeeb Gbolahan ",
       phone: "08061105951",
       whatsapp: "08061105951",
       image: "roq.jpg"
+    
+    },
+      {
+    name: "Abdulrasaq Aishat",
+      phone: "08159507651",
+      whatsapp: "08159507651",
+      image: "ais.jpg"
     
     },
     
