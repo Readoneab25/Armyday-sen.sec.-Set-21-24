@@ -27,7 +27,7 @@ document.getElementById("over").onclick = function(){
      
  }
  document.getElementById("id").onclick = function () {
-     window.location.href = "https://readoneab25.github.io/Armyday-sen.sec.-Set-21-24/ "
+     window.location.href = "https://readoneab25.github.io/Bluewave/ "
      
  }
 
