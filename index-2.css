@@ -215,7 +215,22 @@
     margin: 10px 0;
     color: #006400;
   }
-
+  
+  #design img{
+  animation : sh 3s linear infinite;
+  }
+  @keyframes sh{
+      0%{
+    box-shadow: 0 2.6667px 6.6667px rgba(0,128,0,0.3);
+      }
+      50%{
+     box-shadow: 0 5.3334px 13.3333px rgba(0,128,0,0.3);
+      }
+      100%{
+          transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,128,0,0.3);
+      }
+  }
   /* ===== FOOTER ===== */
   footer {
     background: #006400;

@@ -18,7 +18,18 @@ document.getElementById("over").onclick = function(){
     tog.style.display = "flex"
     over.style.display = "none"
 }
-
+ document.getElementById("di").onclick = function () {
+     window.location.href = " https://readoneab25.github.io/portfolio.github.io/#about"
+     
+ }
+ document.getElementById("de").onclick = function () {
+     window.location.href = "https://readoneab25.github.io/B-tech.github.io/#about"
+     
+ }
+ document.getElementById("id").onclick = function () {
+     window.location.href = "https://readoneab25.github.io/Armyday-sen.sec.-Set-21-24/ "
+     
+ }
 
   // Example student data
   const students = [
