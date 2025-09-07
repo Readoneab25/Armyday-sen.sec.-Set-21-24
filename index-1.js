@@ -37,7 +37,7 @@ document.getElementById("over").onclick = function(){
       name: "Abdulganiyu kehinde<br>(The Class REP)",
       phone: "08171138367",
       whatsapp: "08171138367",
-      image: "kehinde.jpg"
+      image: "kenny.jpg"
     
     },
     {
