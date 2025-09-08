@@ -30,6 +30,11 @@ document.getElementById("over").onclick = function(){
      window.location.href = "https://readoneab25.github.io/Bluewave/ "
      
  }
+ document.getElementById("nav").onclick = function () {
+      nav.style.left = "-100%"
+      to.style.display = "none"
+    tog.style.display = "flex"
+ }
 
   // Example student data
   const students = [
@@ -113,6 +118,13 @@ document.getElementById("over").onclick = function(){
       image: "ais.jpg"
     
     },
+    {
+    name: "Issa Islamiyat",
+      phone: "09034568380",
+      whatsapp: "09034568380",
+      image: "isl.jpg"
+    
+    },
     
       ];
 
@@ -125,9 +137,9 @@ document.getElementById("over").onclick = function(){
       <img src="${student.image}" alt="${student.name}">
       <div class="student-info">
         <h3>${student.name}</h3>
-        <p>📞 ${student.phone}</p>
+        <p>📞${student.phone}</p>
         
-        <a href="https://wa.me/234${student.whatsapp.slice(1)}" target="_blank" class="whatsapp-btn">WhatsApp</a>
+        <a href="https://wa.me/234${student.whatsapp.slice(1)}" target="_blank" class="whatsapp-btn">💬 Chat Via WhatsApp</a>
       </div>
     `;
     grid.appendChild(card);
